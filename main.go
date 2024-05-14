@@ -9,6 +9,7 @@ import (
 	"github.com/awoo-detat/werewolf/game"
 	"github.com/awoo-detat/werewolf/player"
 
+	"github.com/google/uuid"
 	"github.com/gorilla/websocket"
 )
 
@@ -21,6 +22,7 @@ func main() {
 			return true // Disable CORS for testing
 		},
 	}
+	players := make(map[uuid.UUID]*player.Player)
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		slog.Info("request received", "User-Agent", r.Header["User-Agent"], "RemoteAddr", r.RemoteAddr)
 		c, err := upgrader.Upgrade(w, r, nil)
@@ -29,13 +31,28 @@ func main() {
 			fmt.Fprintf(w, "error: %s", err)
 			return
 		}
-		p := player.NewPlayer(c)
+
+		var p *player.Player
+		query := r.URL.Query()
+		if id, err := uuid.Parse(query.Get("id")); err == nil {
+			slog.Info("reconnecting to player", "player", p)
+			p = players[id]
+			p.Reconnect(c)
+		}
+		if p == nil {
+			p = player.NewPlayer(c)
+			slog.Info("creating new player", "player", p)
+		}
+
 		if g == nil {
 			slog.Info("creating game")
 			g = game.NewGame(p)
+		} else {
+			g.AddPlayer(p)
 		}
 		go p.Play()
 	})
+
 	slog.Info("starting server")
 	log.Fatal(http.ListenAndServe(":43200", nil))
 }
