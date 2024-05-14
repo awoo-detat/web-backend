@@ -35,12 +35,15 @@ func main() {
 		var p *player.Player
 		query := r.URL.Query()
 		if id, err := uuid.Parse(query.Get("id")); err == nil {
-			slog.Info("reconnecting to player", "player", p)
 			p = players[id]
-			p.Reconnect(c)
+			if p != nil {
+				slog.Info("reconnecting to player", "player", p)
+				p.Reconnect(c)
+			}
 		}
 		if p == nil {
 			p = player.NewPlayer(c)
+			players[p.ID] = p
 			slog.Info("creating new player", "player", p)
 		}
 
