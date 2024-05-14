@@ -45,13 +45,13 @@ func main() {
 			p = player.NewPlayer(c)
 			players[p.ID] = p
 			slog.Info("creating new player", "player", p)
-		}
 
-		if g == nil {
-			slog.Info("creating game")
-			g = game.NewGame(p)
-		} else {
-			g.AddPlayer(p)
+			if g == nil {
+				slog.Info("creating game")
+				g = game.NewGame(p)
+			} else {
+				g.AddPlayer(p)
+			}
 		}
 		go p.Play()
 	})
