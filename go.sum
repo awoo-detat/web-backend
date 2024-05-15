@@ -27,6 +27,8 @@ github.com/awoo-detat/werewolf v0.13.1 h1:gRdlm231+9pU+ib9yapkdG89tclmEc1Xkzx3rK
 github.com/awoo-detat/werewolf v0.13.1/go.mod h1:5JXdPsW6R/2+GU5Us6NdFSbmKWxxBlKhKXGZZg2JL9U=
 github.com/awoo-detat/werewolf v0.14.0 h1:Fpk5dbwRDCHETGMONHr3gezhScwSIVXXXThMQ0BJYT0=
 github.com/awoo-detat/werewolf v0.14.0/go.mod h1:5JXdPsW6R/2+GU5Us6NdFSbmKWxxBlKhKXGZZg2JL9U=
+github.com/awoo-detat/werewolf v0.15.0 h1:8E45NkpJvnglv7c+h9evxby3BLwPL1q2zAJcxWbAQRs=
+github.com/awoo-detat/werewolf v0.15.0/go.mod h1:5JXdPsW6R/2+GU5Us6NdFSbmKWxxBlKhKXGZZg2JL9U=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
