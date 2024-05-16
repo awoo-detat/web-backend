@@ -69,6 +69,8 @@ github.com/awoo-detat/werewolf v0.27.4 h1:ugcY+ezc7wF53mUq81n5B2myUi9ocl+xNLm6DM
 github.com/awoo-detat/werewolf v0.27.4/go.mod h1:QfRMI2bEEeBT+pJLjM7bcf4gwmYF3KBKkgfsqvTNs/s=
 github.com/awoo-detat/werewolf v0.28.0 h1:9sgJjUcbTcHAO14zMfdRGVNr+kXaghg+mEv+TMwJngg=
 github.com/awoo-detat/werewolf v0.28.0/go.mod h1:QfRMI2bEEeBT+pJLjM7bcf4gwmYF3KBKkgfsqvTNs/s=
+github.com/awoo-detat/werewolf v0.28.1 h1:5W9P72H8CEoIvXmqrT3QrpmY+ttbZQfyETNBpJqQWhM=
+github.com/awoo-detat/werewolf v0.28.1/go.mod h1:QfRMI2bEEeBT+pJLjM7bcf4gwmYF3KBKkgfsqvTNs/s=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
