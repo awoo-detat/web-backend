@@ -56,6 +56,12 @@ func main() {
 		go p.Play()
 	})
 
+	http.HandleFunc("/new", func(w http.ResponseWriter, r *http.Request) {
+		g = nil
+		players = make(map[uuid.UUID]*player.Player)
+		http.Redirect(w, r, "/", http.StatusOK)
+	})
+
 	slog.Info("starting server")
 	log.Fatal(http.ListenAndServe(":43200", nil))
 }
