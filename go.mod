@@ -3,7 +3,7 @@ module github.com/awoo-detat/web-backend
 go 1.22.3
 
 require (
-	github.com/awoo-detat/werewolf v0.28.3
+	github.com/awoo-detat/werewolf v0.30.1
 	github.com/gorilla/websocket v1.5.1
 )
 
